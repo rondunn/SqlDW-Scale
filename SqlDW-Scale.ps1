@@ -28,7 +28,7 @@ $ServerName = Get-AutomationVariable -Name 'ServerName'
 $DatabaseName = Get-AutomationVariable -Name 'DatabaseName'
 $ScaleObjective = Get-AutomationVariable -Name 'ScaleObjective'
  
-# Resume DW
+# Scale DW
  
 Write-Output "Scale $($DatabaseName)" 
 Set-AzureRmSqlDatabase -DatabaseName $DatabaseName -ServerName $ServerName -RequestedServiceObjectiveName $ScaleObjective
